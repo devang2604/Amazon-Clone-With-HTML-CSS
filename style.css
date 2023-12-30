@@ -4,8 +4,16 @@
   border: border-box;
 }
 
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #e3e6e6;
+}
+
 .navbar {
-  height: 60px;
+  height: 100%;
+  width: 100%;
   background-color: #0f1111;
   color: white;
   display: flex;
@@ -14,8 +22,10 @@
 }
 
 .nav-logo {
-  height: 50px;
-  width: 100px;
+  height: 10vh;
+  width: 20vh;
+  display: flex;
+  align-items: center;
 }
 
 .logo1 {
@@ -23,6 +33,10 @@
   background-size: cover;
   height: 50px;
   width: 100px;
+}
+
+.logo1 img {
+  height: 7vh;
 }
 
 .border {
@@ -34,6 +48,15 @@
 }
 
 /** BOX 2 **/
+
+.nav-address {
+  height: 10vh;
+  width: 33.1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 3.5vh;
+}
 
 .add-first {
   color: #cccccc;
@@ -57,14 +80,14 @@
   display: flex;
   justify-content: space-evenly;
   background-color: pink;
-  width: 620px;
-  height: 40px;
+  height: 6vh;
+  width: 88vh;
   border-radius: 4px;
 }
 
 .search-select {
   background-color: #f3f3f3;
-  width: 50px;
+  width: 10%;
   text-align: center;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -107,7 +130,7 @@ span {
 /** BOX 6 **/
 
 .nav-cart i {
-  font-size: 30px;
+  font-size: 7vh;
 }
 
 .nav-cart {
@@ -266,5 +289,172 @@ ul a {
 }
 
 .copyright {
-    padding-top: 5px;
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 412px) {
+  body,
+  html {
+    height: 100%;
+    width: 100vh;
+  }
+  header {
+    height: 100%;
+    width: 100vh;
+  }
+  .add-first {
+    font-size: 2vh;
+    color: #bbb;
+  }
+  .add-sec {
+    font-size: 2.3vh;
+    color: #fff;
+    font-weight: 600;
+  }
+  .navbar {
+    padding: 0.5vh;
+    height: 38vh;
+    width: 100%;
+    align-items: normal;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /* MENU BARS */
+  .panel1 {
+    height: 32%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8vh;
+    color: #eee;
+    order: -2;
+  }
+  /* LOGO */
+  .logo {
+    width: 55%;
+    height: 33%;
+    order: -2;
+  }
+  .logo img {
+    position: relative;
+    top: 0.5vh;
+    left: 2vh;
+    height: 8vh;
+  }
+  /* SIGN IN */
+  .signin {
+    display: flex;
+    gap: 0.6vh;
+    align-items: center;
+    color: #fff;
+    height: 33%;
+    width: 20%;
+    font-size: 3.1vh;
+    font-weight: 600;
+    order: -2;
+  }
+  .nav-signin span {
+    color: #eee;
+  }
+
+  /* ADDRESS */
+  .nav-address {
+    display: none;
+  }
+  /* SEARCHBOX */
+  .nav-search {
+    height: 28%;
+    width: 96%;
+    background: #fff;
+    border-radius: 1vh;
+    justify-content: space-between;
+  }
+
+  .search-select {
+    display: none;
+  }
+
+  .search-input {
+    width: 89%;
+    padding-left: 2.5vh;
+    font-size: 3vh;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+  }
+
+  .search {
+    width: 10%;
+    font-size: 5vh;
+    border: none;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+  }
+
+  /* SHOPING */
+  .nav-cart {
+    width: 14vh;
+    height: 33%;
+    order: -1;
+  }
+  .navcart i {
+    top: 0.6vh;
+    position: relative;
+    font-size: 8vh;
+    color: #fff;
+  }
+
+  /* HERO PAGE */
+  .hero-section {
+    width: 100%;
+    background: url("mainImages/Hero-Image.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+  }
+
+  /* CARDS AND PRODUCTS */
+  .shop-section {
+    height: 1990vw;
+    padding: 0vh;
+    gap: 1vh;
+    flex-wrap: wrap;
+  }
+  .box {
+    padding: 1vh 4vh;
+    height: 120vh;
+    width: 100%;
+  }
+  .box-content h2 {
+    margin: 3vh 0vh;
+  }
+  .box-content p {
+    text-decoration: none;
+    font-size: 3.5vh;
+    color: #017184;
+  }
+  .box-img img {
+    height: 83%;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 80vh;
+  }
+  .foot-panel1 {
+    height: 15vh;
+    flex-direction: column;
+  }
+  .foot-panel2 {
+    position: relative;
+    height: 70vh;
+  }
+  
+  .foot-panel4{
+    padding-top: 3vh;
+    justify-content: start;
+    align-content: space-between;
+  }
+  
 }
